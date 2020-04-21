@@ -1,0 +1,407 @@
+html,
+body {
+    margin: 0;
+    font-family: "Open Sans";
+}
+
+a,
+a:hover,
+a:visited {
+    color: #f2f2f2;
+}
+
+section {
+    padding: 16px;
+}
+
+h1,
+h2,
+h4 {
+    font-size: medium;
+    font-family: shojumaru;
+    color: #7B1E31;
+    text-align: center;
+    margin: 0;
+}
+
+#infoContact1 {
+    margin: 12px;
+    align-self: start;
+    color: #f2f2f2;
+    flex: 0.8;
+}
+
+#btnHome {
+    background-color: #7B1E31;
+    border-radius: 8px;
+    border-color: #f2f2f2;
+    border-width: 2px;
+    border-style: solid;
+    align-self: center;
+    justify-self: center;
+}
+
+#btnHome h1 {
+    padding: 0px 8px 0 8px;
+    font-size: larger;
+    color: #f2f2f2;
+    margin: 0px;
+}
+
+#btnHome a {
+    text-decoration: none;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    background-image: url("../img/cherry-blossoms-4069596_960_720.png");
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* tuile de separation /titre entre les sections */
+
+.borderTitle {
+    display: block;
+    margin: auto;
+    border-color: #7B1E31;
+    border-style: solid;
+    border-radius: 8px;
+    width: 200px;
+}
+li{
+    list-style: none;
+    padding: 0;
+}
+
+/* ----------- */
+/* début story */
+/* ----------- */
+
+#secStory {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgStory {
+    display: flex;
+    background-image: url("../img/japan-4807317_960_720.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px 30px;
+    width: 100%;
+    max-width: 1024px;
+    min-width: 250px;
+    min-height: 300px;
+    align-self: center;
+    justify-self: center;
+    border-color: #7b1e31;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 2px;
+    padding: 8px;
+}
+
+.txtStory {
+    background-color: rgba(0, 0, 0, 0.74);
+    background-size: 100%;
+    border-radius: 12px;
+    min-width: 120px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    overflow: auto;
+    font-size: 0.8rem;
+    width: 40%;
+}
+
+/* ---------- */
+/* Formulaire */
+/* ---------- */
+
+.card {
+    margin: 20px auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.74);
+    background-size: 100%;
+    border-radius: 12px;
+    min-width: 120px;
+    max-width: 1024px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 0.8rem;
+    text-justify: inter-word;
+    display: none;
+}
+
+#secContact>p {
+    text-align: center;
+}
+
+fieldset {
+
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    background: white;
+    border-radius: 3px;
+    border: 2px solid #7b1e31;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.row {
+    margin-bottom: 5px;
+}
+
+
+/* ============ */
+/* ===footer=== */
+/* ============ */
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer {
+    background-color: #7B1E31;
+    color: #f2f2f2;
+    padding: 12px;
+}
+
+#gMap {
+    padding: 12px;
+}
+
+#gMap h4 {
+    text-align: left;
+    color: #f2f2f2;
+}
+
+#legalInf h4 {
+    text-align: left;
+    color: #f2f2f2;
+    margin: 12px 0;
+}
+
+#legalInf {
+    font-size: 0.8rem;
+    line-height: .9rem;
+    margin: 12px;
+}
+
+#copyright {
+    text-align: center;
+}
+
+#credits {
+    visibility: hidden;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 41vh 500px auto auto auto;
+
+    grid-template-areas: "topnav topnav"
+        "header header"
+        "secStory secStory"
+        "secService secService"
+        "secContact secContact"
+        "footer footer";
+}
+
+header {
+    grid-area: header;
+    height: 41vh;
+}
+
+/* ============ */
+/* ===NavBar=== */
+/* ============ */
+
+.Bienvenue {
+    margin-bottom: 30px;
+}
+
+nav {
+    grid-area: topnav;
+    background-color: rgb(34, 34, 34);
+}
+
+nav a img {
+    height: 20px;
+    filter: invert(1);
+}
+
+.dropdown-menu a img {
+    filter: none;
+}
+
+#secStory {
+    grid-area: secStory;
+}
+
+#secService {
+    grid-area: secService;
+}
+
+.borderTitle {
+    margin-bottom: 20px;
+}
+
+#secContact {
+    grid-area: secContact;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* config pour tablettes */
+
+@media screen and (min-width: 650px) {
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 17% 1fr 17%;
+        grid-template-rows: auto 50vh auto auto auto auto;
+
+        grid-template-areas: "topnav topnav topnav"
+            "header header header"
+            "secStory secStory secStory"
+            ". secService ."
+            ". secContact ."
+            "footer footer footer";
+    }
+
+    header {
+        grid-area: header;
+        height: 50vh;
+    }
+
+    nav {
+        grid-area: topnav;
+        background-color: rgb(34, 34, 34);
+    }
+
+    nav a img {
+        height: 20px;
+        filter: invert(1);
+    }
+
+    .txtStory {
+        width: 40%;
+    }
+
+    .borderTitle {
+        margin-top: 20px;
+    }
+
+    .dropdown-menu a img {
+        filter: none;
+    }
+
+    #secStory {
+        grid-area: secStory;
+    }
+
+    #secService {
+        grid-area: secService;
+    }
+
+    .borderTitle {
+        margin-bottom: 30px;
+    }
+
+    #secContact {
+        grid-area: secContact;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    .card {
+        display: block;
+    }
+}
+
+/* config pour ecran normal */
+
+@media screen and (min-width: 900px) {
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 25% 1fr 25%;
+        grid-template-rows: 100vh auto auto auto auto auto;
+
+        grid-template-areas: "header header header"
+            "topnav topnav topnav"
+            ". secStory ."
+            ". secService ."
+            ". secContact ."
+            "footer footer footer";
+    }
+
+    header {
+        grid-area: header;
+        height: 100vh;
+    }
+
+    nav {
+        grid-area: topnav;
+        background-color: rgb(34, 34, 34);
+    }
+
+    nav a img {
+        height: 20px;
+        filter: invert(1);
+    }
+
+    .dropdown-menu a img {
+        filter: none;
+    }
+
+    #secStory {
+        grid-area: secStory;
+    }
+
+    .txtStory {
+        width: 30%;
+    }
+
+    #secService {
+        grid-area: secService;
+    }
+
+    .borderTitle {
+        margin-bottom: 30px;
+    }
+
+    #secContact {
+        grid-area: secContact;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    .card {
+        display: block;
+    }
+}
